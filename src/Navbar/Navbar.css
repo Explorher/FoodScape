@@ -1,0 +1,153 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Example background color */
+}
+
+/* Header styles */
+header {
+    background-color: #4B0082;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .logo {
+    width: 50px;
+    height: 50px;
+    background-image: url('https://dynamic.brandcrowd.com/preview/logodraft/37a9e9e0-7941-46a7-8fb9-3cca965dec94/image/large.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+header .search-container {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+}
+
+header .search-container input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+header .search-container input:focus {
+    border-color: #FFD700;
+}
+
+header .search-container .search-button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4B0082;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .search-container .search-button:hover {
+    background-color: #4B0082;
+    color: #FFD700;
+}
+
+/* Desktop navigation */
+.nav-desktop {
+    display: flex;
+    align-items: center;
+}
+
+.nav-desktop a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-desktop a:hover {
+    color: #FFD700;
+}
+
+/* Drawer styles for mobile view */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(128, 126, 126, 0.551);
+    
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(3, 3, 3, 0.37);
+    transition: left 0.3s;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    align-items: flex-start;
+}
+
+.drawer.open {
+    left: 0;
+}
+
+.drawer a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.drawer a:hover {
+    background-color: #5e2ca5;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 767px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .drawer {
+        display: flex;
+    }
+
+    header .search-container {
+        width: calc(100% - 70px); /* Adjust to fit the search container and logo */
+    }
+
+    .drawer-open {
+        backdrop-filter: blur(10px); /* Apply blur effect when drawer is open */
+    }
+}
+
+/* Hide drawer on desktop view */
+@media (min-width: 768px) {
+    .drawer {
+        display: none;
+    }
+}
