@@ -23,7 +23,7 @@ function Navbar() {
                         <Link to="/">Home</Link>
                         <Link to="/product">Products</Link>
                         <Link to="/">FoodGPT</Link>
-                        <Link to="/">SignIn</Link>
+                        <Link to="/Login">SignIn</Link>
                     </nav>
                 </div>
                 <div className="search-container">

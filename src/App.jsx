@@ -14,6 +14,7 @@ import Thai from './Home/Thai/Thai'
 import French from './Home/French/French'
 import Middle from './Home/Middle-East/Middle'
 import Product from './Products/Product'
+import SigIn from './SigIn/SigIn';
 
 
   function App() {
@@ -34,6 +35,7 @@ import Product from './Products/Product'
           <Route path="/middle" element={<Middle />} />
           <Route path="/thai" element={<Thai />} />
           <Route path="/product" element={<Product/>} />
+          <Route path="/Login" element={<SigIn/>} />
           
         </Routes>
     
