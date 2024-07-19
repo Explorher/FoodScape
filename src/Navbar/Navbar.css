@@ -1,4 +1,4 @@
-/* Existing styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -29,11 +29,16 @@ header .left-section {
 header .logo {
     width: 50px;
     height: 50px;
-    background-image: url('https://dynamic.brandcrowd.com/preview/logodraft/37a9e9e0-7941-46a7-8fb9-3cca965dec94/image/large.png');
+    /* background-image: url('https://dynamic.brandcrowd.com/preview/logodraft/37a9e9e0-7941-46a7-8fb9-3cca965dec94/image/large.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 50%;
     cursor: pointer;
+}
+header .logo img {
+    width: 5px;
+    height: 5px;
+
 }
 
 header .brand-text {

@@ -16,7 +16,7 @@ body {
 .grid-container {
   padding: 20px 10px; /* Reduced left and right padding */
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default: 3 cards per row */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
   justify-content: start; /* Align items from the left */
 }
@@ -66,6 +66,6 @@ body {
 /* Media Query for Phones */
 @media (max-width: 767px) {
   .grid-container {
-      grid-template-columns: 1fr; /* 1 card per row on phones */
+      grid-template-columns: 1fr; 
   }
 }

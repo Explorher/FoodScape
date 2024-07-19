@@ -15,6 +15,7 @@ import French from './Home/French/French'
 import Middle from './Home/Middle-East/Middle'
 import Product from './Products/Product'
 import SigIn from './SigIn/SigIn';
+import Chatbot from './FoodGPT/Chatbot';
 
 
   function App() {
@@ -36,6 +37,8 @@ import SigIn from './SigIn/SigIn';
           <Route path="/thai" element={<Thai />} />
           <Route path="/product" element={<Product/>} />
           <Route path="/Login" element={<SigIn/>} />
+          
+          <Route path="/Chatbot" element={<Chatbot/>} />
           
         </Routes>
     

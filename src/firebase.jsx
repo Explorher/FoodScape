@@ -1,13 +1,8 @@
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import { getAuth, signInWithPopup, GoogleAuthProvider, } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyCOnRgzEwir7LGCjo0C8AvD2gHGexwxhC0",
   authDomain: "foodscape-react.firebaseapp.com",
@@ -18,7 +13,7 @@ const firebaseConfig = {
   measurementId: "G-R295BHFPMN"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app); 
 
