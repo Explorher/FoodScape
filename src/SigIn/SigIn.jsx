@@ -1,9 +1,9 @@
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { GoogleAuthProvider, signInWithPopup, signInWithRedirect } from 'firebase/auth'
 import React, { useState } from 'react';
 import './SignIn.css'
 import { auth } from '../firebase'
 
-export default function SigIn() {
+export default function SigIn({ setPic }) {
    
     function googleLogin() {
         const provider=new GoogleAuthProvider
@@ -12,9 +12,10 @@ export default function SigIn() {
      
 
         signInWithPopup(auth,provider).then(async(result)=>{
-            console.log(result)
-           
-            
+        //     console.log(result)
+        
+            setPic(result.user.photoURL); 
+               
         })
     }
   return (

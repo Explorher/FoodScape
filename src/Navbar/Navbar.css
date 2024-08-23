@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
+    
 }
 
 header {
@@ -26,20 +27,35 @@ header .left-section {
     align-items: center;
 }
 
-header .logo {
+ header .logo {
     width: 50px;
     height: 50px;
-    /* background-image: url('https://dynamic.brandcrowd.com/preview/logodraft/37a9e9e0-7941-46a7-8fb9-3cca965dec94/image/large.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 50%;
     cursor: pointer;
 }
 header .logo img {
-    width: 5px;
-    height: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
 
+} 
+ header .logoo {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
 }
+header .logoo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+
+} 
+
 
 header .brand-text {
     margin-left: 10px;
@@ -200,3 +216,20 @@ header .search-container .search-button:hover {
     }
 
 }
+/* Existing CSS */
+
+.logo {
+    position: relative; /* Ensure the logo container is positioned relative */
+    cursor: pointer;
+}
+
+.logo-img {
+    position: absolute; /* Position the image absolutely within the logo container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust width and height as needed */
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the logo area */
+}
+
+/* Rest of your existing CSS */

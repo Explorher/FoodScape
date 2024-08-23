@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 
 
-function Navbar() {
+function Navbar({pic}) {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
 
@@ -18,10 +18,21 @@ function Navbar() {
     };
 
     return (
+       
         <div className={`App ${drawerOpen ? 'drawer-open' : ''}`}>
+            
             <header> 
+               
+
                 <div className="left-section">
-                    <div className="logo" onClick={toggleDrawer} ><img src="" alt=""  /></div>
+                    {/* <div className="" onClick={toggleDrawer} ><img src="" alt=""  /></div>
+                     */}
+                     
+                     <div class="logoo">
+                        
+                        <img src={pic} alt="Overlay" class="overlay" />
+                    </div>
+
                    <div className="brand-text"><Link className='brand' to="/"> FoodScape</Link></div>
                     <nav className="nav-desktop">
                         <Link to="/">Home</Link>
