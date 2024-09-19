@@ -48,7 +48,7 @@ function Home() {
 
             <div className="grid-item">
                 <Link to="/middle">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/foodscape-react.appspot.com/o/mEast.jpg?alt=media&token=8e9325b4-0904-40fb-b780-b68f570084c8" alt="Italian Cuisine" />
+                    <img src="https://firebasestorage.googleapis.com/v0/b/foodscape-react.appspot.com/o/mEast.jpg?alt=media&token=8e9325b4-jfpj-40fb-b780-b68f570084c8" alt="Italian Cuisine" />
                 </Link>
                 <div className="caption">Middle-East Cuisine</div>
             </div>
@@ -62,7 +62,7 @@ function Home() {
 
             <div className="grid-item">
                 <Link to="/italian">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/foodscape-react.appspot.com/o/explore.jpg?alt=media&token=ac2b5347-e09f-43b2-8067-ebb0dba6a8dd" alt="Italian Cuisine" />
+                    <img  src="https://firebasestorage.googleapis.com/v0/b/foodscape-react.appspot.com/o/explore.jpg?alt=media&token=ac2b5347-e09f-43b2-8067-ebb0dba6a8dd" alt="Italian Cuisine" />
                 </Link>
                 <div className="caption">Explore Cuisine</div>
             </div>

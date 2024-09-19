@@ -3,8 +3,13 @@ import './IndRecipe.css';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase'; // Adjust path if necessary
 import { Link } from 'react-router-dom'
-export default function IndRecipe() {
+
+export default function IndRecipe({ setEd }) {
   const [dishes, setDishes] = useState([]);
+
+  const getRecipe = (foodId) => {
+    setEd(foodId);
+  };
 
   useEffect(() => {
     const fetchDishes = async () => {
@@ -24,24 +29,27 @@ export default function IndRecipe() {
 
   return (
     <div className="recipe-container">
-      {dishes.map((food, index) => (
-        <div key={index} className="recipe-card">
-          <div className="image-container">
-            <img src={food.imageURL} alt="Dish" />
+      {dishes
+        .filter(food => food.Id < 10) // Filter to only include items with Id < 10
+        .map((food, index) => (
+          <div key={index} className="recipe-card">
+            <div className="image-container">
+              <img src={food.imageURL} alt="Dish" />
+            </div>
+            <div className="content">
+              <h2 className="recipe-title">
+                {food.Id}. Delicious {food.name}
+                <img src={food.type} alt="Additional" className="additional-image" />
+              </h2>
+              <p className="recipe-about">{food.About}</p>
+            </div>
+            <div className="button-container">
+              <Link to={`/InGet/${food.Id}`}>
+                <button className="get-recipe-button" onClick={() => getRecipe(food.Id)}>Get Recipe</button>
+              </Link>
+            </div>
           </div>
-          <div className="content">
-            <h2 className="recipe-title">
-              Delicious {food.name}
-              <img src={food.type} alt="Additional" className="additional-image" />
-            </h2>
-            <p className="recipe-about">{food.About}</p>
-            {/* <p className="recipe-recipe">{food.recipe}</p> */}
-          </div>
-          <div className="button-container">
-           <Link to="/InGet"> <button className="get-recipe-button">Get Recipe</button></Link>
-          </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }

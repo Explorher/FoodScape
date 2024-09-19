@@ -8,7 +8,6 @@ function Navbar({pic}) {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
 
-
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
@@ -28,13 +27,15 @@ function Navbar({pic}) {
                     {/* <div className="" onClick={toggleDrawer} ><img src="" alt=""  /></div>
                      */}
                      
-                     <div class="logoo">
+                     <div className="logoo">
+
                         
-                        <img src={pic} alt="Overlay" class="overlay" />
+                        <img src={pic} alt="Overlay" className="overlay" />
                     </div>
 
                    <div className="brand-text"><Link className='brand' to="/"> FoodScape</Link></div>
                     <nav className="nav-desktop">
+                     
                         <Link to="/">Home</Link>
                         <Link to="/product">Products</Link>
                         <Link to="/Chatbot">FoodGPT</Link>

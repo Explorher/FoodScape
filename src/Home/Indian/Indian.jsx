@@ -40,7 +40,7 @@ const IndianCuisine = () => {
         },
         {
             id: 2,
-            
+            href:'/food/IndDrinks',
             src: 'https://imgs.search.brave.com/PJEy5x1hYo4eUFdjiz-vw_oEQBeGiYy0UxHXNOA0REg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmluZWRpbmluZ2xv/dmVycy5jb20vc2l0/ZXMvZy9maWxlcy94/a25mZGs2MjYvZmls/ZXMvMjAyMS0xMi90/eXBlcy1nbGFzc3dh/cmUtbWFydGluaS1j/b2NrdGFpbCVDMiVB/OWlTdG9jay5qcGc',
             title: 'Drinks',
             description: 'Refreshing beverages.'

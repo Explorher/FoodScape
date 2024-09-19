@@ -1,12 +1,17 @@
-.bo {
+html {
+    font-size: 100%; /* Base font size for scaling */
+}
+
+.ot {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    /* background-color: #f4f4f9; */
+    background-color: #f4f4f900;
     box-sizing: border-box;
     color: #333;
-    height: 100vh;
+    min-height: 100vh; /* Ensure full viewport height */
     display: flex;
+    flex-direction: column; /* Ensure flex direction is column */
     align-items: center;
     justify-content: center;
 }
@@ -14,12 +19,13 @@
 .containerr {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    height: 90vh; /* Covers most of the viewport height */
-    width: 90vw;  /* Covers most of the viewport width */
+    flex: 1; /* Ensure it grows and fills the available space */
     gap: 20px;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    overflow: hidden; /* Prevent overflow outside the container */
+    padding: 20px; /* Add padding to avoid content touching the edges */
 }
 
 .lefft-section {
@@ -33,16 +39,16 @@
 }
 
 .left-section img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%; /* Ensure image scales with container */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
 }
 
 .right-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 20px;
+    flex: 1; /* Allow it to expand and fill available space */
 }
 
 .top-right {
@@ -53,7 +59,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 18px;
+    font-size: 1rem; /* Use relative units for font size */
     margin-bottom: 20px;
     background-color: #f7f7f9;
     padding: 10px 20px;
@@ -64,7 +70,7 @@
 .servings-label {
     font-weight: 600;
     color: #444;
-    font-size: 20px;
+    font-size: 1.2rem; /* Use relative units for font size */
 }
 
 .servings-input-container {
@@ -83,7 +89,7 @@
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
-    font-size: 18px;
+    font-size: 1rem; /* Use relative units for font size */
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -96,7 +102,7 @@
     width: 60px;
     padding: 5px;
     border: none;
-    font-size: 18px;
+    font-size: 1rem; /* Use relative units for font size */
     text-align: center;
     outline: none;
     color: #444;
@@ -104,7 +110,7 @@
 
 .ingredients h2 {
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 1.5rem; /* Use relative units for font size */
     color: #444;
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 5px;
@@ -121,6 +127,7 @@
     padding-left: 10px;
     position: relative;
     color: #555;
+    font-size: 1rem; /* Use relative units for font size */
 }
 
 .ingredients li::before {
@@ -128,17 +135,14 @@
     position: absolute;
     left: 0;
     color: #ff6347;
-    font-size: 20px;
+    font-size: 0.8rem; /* Use relative units for font size */
     line-height: 1;
 }
 
 .bottom-right {
     border-top: 2px solid #e0e0e0;
     padding-top: 20px;
-    font-size: 16px;
+    font-size: 1rem; /* Use relative units for font size */
     line-height: 1.6;
     color: #666;
-    position: relative;
-    top: -50%; /* Move the border up to be aligned with half of the image height */
-    margin-bottom: 0;
 }
