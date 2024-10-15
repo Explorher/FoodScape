@@ -61,7 +61,7 @@ function Home() {
             </div>
 
             <div className="grid-item">
-                <Link to="/italian">
+                <Link to="/cuisine">
                     <img  src="https://firebasestorage.googleapis.com/v0/b/foodscape-react.appspot.com/o/explore.jpg?alt=media&token=ac2b5347-e09f-43b2-8067-ebb0dba6a8dd" alt="Italian Cuisine" />
                 </Link>
                 <div className="caption">Explore Cuisine</div>

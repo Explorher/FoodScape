@@ -12,7 +12,7 @@ export default function SigIn({ setPic }) {
      
 
         signInWithPopup(auth,provider).then(async(result)=>{
-        //     console.log(result)
+           console.log(result)
         
             setPic(result.user.photoURL); 
                

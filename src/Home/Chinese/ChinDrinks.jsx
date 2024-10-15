@@ -4,7 +4,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase'; // Adjust path if necessary
 import { Link } from 'react-router-dom'
 
-export default function ChinRecipe({ setEd }) {
+export default function ChinDrinks({ setEd }) {
   const [dishes, setDishes] = useState([]);
 
   const getRecipe = (foodId) => {
@@ -39,14 +39,14 @@ export default function ChinRecipe({ setEd }) {
           </div>
           <div className="content">
             <h2 className="recipe-title">
-              {food1.Id}. Delicious {food1.name}
+              {food1.Id}. {food1.name}
               <img src={food1.type} alt="Additional" className="additional-image" />
             </h2>
             <p className="recipe-about">{food1.About}</p>
             {/* <p className="recipe-recipe">{food1.recipe}</p> */}
           </div>
           <div className="button-container">
-            <Link to={`/InGet/${food1.Id}`}>
+            <Link to={`/ChGet/${food1.Id}`}>
               <button className="get-recipe-button" onClick={() => getRecipe(food1.Id)}>Get Recipe</button>
             </Link>
           </div>
